@@ -1,0 +1,17 @@
+@media only screen and (max-width: 979px) { 
+    html{
+        Width:100%;
+    }
+} /*デバイスの横幅が979px以下の場合*/
+ 
+@media only screen and (min-width: 321px) and (max-width: 768px) {   
+    html{
+        Width:100%;
+    }
+} /*デバイスの横幅が321以上768以下の場合*/
+ 
+@media only screen and (max-width: 320px) {
+    header{
+        Width:90%;
+    }
+} /* デバイスの横幅が320px以下の場合 */
