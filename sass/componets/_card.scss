@@ -1,0 +1,192 @@
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #6543fa;
+
+
+$btn-white: #fff;
+
+.card {
+
+    // FUNCTIONNSLITY
+    perspective : 150rem;
+    -moz-perspective: 150rem;
+    position:relative;
+    height:40rem;
+
+    &__side {
+        height:31.8rem;
+        transition: all .9s ease;
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        backface-visibility: hidden;
+        border-radius:3px;
+        overflow:hidden;
+        box-shadow: 1.1rem 1.2rem rgba(black, .60);
+
+
+        &--front{
+          background-color: #fff;
+        }
+
+
+        &--back {
+            transform:rotateY(180deg);
+
+            &-1 {
+               background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
+
+
+            &-2 {
+                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+            }
+
+            &-3 {
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+            }                       
+
+        }
+
+    }
+
+    &:hover &__side--front {
+        transform:rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform:rotateY(0);
+    }
+
+
+    //FRONT SIDE STYLING
+    &__picture {    
+        background-size: cover;
+        height:14.8rem;
+        background-blend-mode: color;
+        -webkit-clip-path:polygon(0 0,100% 0,100% 85%,0 100%);
+        clip-path:polygon(0 0,100% 0,100% 85%,0 100%);
+        border-top-left-radius: 1.1rem;
+        border-top-right-radius: 1.1rem;
+
+        &--1{
+          background-image:linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+          url(../img/nat-5.jpg);
+         }
+
+        &--2{
+            background-image:linear-gradient(to right bottom, $color-primary-light, $color-primary-dark),
+            url(../img/nat-6.jpg);
+        }
+
+        &--3{
+            background-image:linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),
+            url(../img/nat-7.jpg);
+        }
+
+    }
+
+
+
+    &__heading {
+        font-size: 1.5rem;
+        font-weight:500;
+        text-transform:uppercase;
+        color:$btn-white;
+        position: absolute;
+        top:5.4rem;
+        right:2rem;
+        text-align:right;
+        width:50%;
+    }
+
+    &__heading-span {
+
+        &--1 {
+            background-image: linear-gradient(to right bottom,
+            rgba($color-secondary-dark, .85),
+            rgba($color-secondary-light, .85)); 
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom,
+            rgba($color-primary-dark, .85),
+            rgba($color-primary-light, .85)); 
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom,
+            rgba($color-tertiary-dark, .85),
+            rgba($color-tertiary-light, .85)); 
+        }
+    }
+
+    &__details {
+        padding:.7rem;
+
+        ul {
+            list-style:none;
+            width:80%;
+            margin:0 auto;
+
+              li{
+                  text-align:center;
+                  font-size:.9rem;
+                  padding:.7rem;
+
+                  &:not(:last-child){
+                      border-bottom: .1rem solid #eee;
+                  }
+              }
+        }
+    }
+
+
+    // ここから cta設定
+    &__cta {
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform : translate(-50%,-50%);
+        width:90%;
+        text-align:center;
+    }
+
+
+    &__price-box {
+        margin-bottom:6rem;
+        color:$btn-white;
+        text-align:center;
+        
+
+    }
+
+    &__price-only {
+        font-size:1.34rem;
+        text-transform: uppercase;
+        
+    }
+
+    &__price-value {
+        font-size:5.2rem;
+        font-weight:170;
+
+    }
+
+
+
+
+
+
+}
+

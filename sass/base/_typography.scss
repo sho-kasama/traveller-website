@@ -1,0 +1,261 @@
+$btn-white: #fff;
+$color-grey-dark: #777;
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+$color-grey-dark: #777;
+
+
+$default-font-size: 1.6rem;
+
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /*font-size: 16px;*/
+  line-height: 1.7;
+  color: $color-grey-dark;
+  padding: 3rem;
+}
+
+.heading-primary {
+  color: $btn-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 5.2rem;
+  &--main {
+    display: block;
+    font-size: 2.4rem;/*Dream are necessary to life の文字*/
+    font-weight: 900;
+    letter-spacing: 2.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 2.9s;
+    animation-timing-function: ease-out;
+  }
+  &--sub {
+    display: block;
+    font-size: 1.69rem;
+    font-weight: 500;
+    letter-spacing: 1.45rem;
+    animation: moveInRight 3s ease-out;
+    margin-top:1rem;
+  }
+}
+
+
+.heading-secondary {
+  font-size:3.3rem;
+  text-form:uppercase;
+  text-weight:700;
+  display:inline-block;
+  background-image: linear-gradient(to right,$color-primary-light,$color-primary-dark);
+  -webkit-background-clip: text;
+  color:transparent;
+  letter-spacing: .2rem;
+  transition: all .2s;
+
+  &:hover{
+    transform: skewY(3deg) skewX(15deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba(purple,.2);
+
+
+  }
+}
+
+
+.heading-tertiary {
+  font-size: 1.4rem;
+  font-weight: 590;
+  text-transform:uppercase;
+}
+
+.heading-four {
+  font-size:1.5rem;
+  text-form:uppercase;
+  text-weight:700;
+  display:inline-block;
+  background-image: linear-gradient(to right,$color-primary-light,$color-primary-dark);
+  -webkit-background-clip: text;
+  color:transparent;
+  letter-spacing: .2rem;
+  transition: all .2s;
+
+
+  &:hover{
+    transform: skewY(3deg) skewX(15deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba(purple,.2);
+
+
+  }
+}
+
+.paragraph {
+  font-size:1.1rem;
+  &:not(:last-child){
+    margin-bottom: 3.0rem;
+  }
+}
+
+
+
+
+
+
+
+
+/* [1 main part1-1　概要編]
+　
+[ 文字の色を変えて真ん中寄せにした]
+1,background-image:linear-gradient() 　
+2,display:inline-block;
+3,webkit-background-clip
+4,color:transparent
+5,hover{transform skewY 傾斜}
+6,transition (還移)
+7,letter-spacing (文字の間の余白)
+8,transform のscaleを指定した
+9, text-shadow
+
+ここからやること
+-文字を真ん中に寄せること
+-hoverをつけて傾けるようにすること
+*/
+
+
+
+/* [1, main part 1-1 用語編 
+1,background-linear-gradient() 　
+わかる◎
+2,display:inline-block;
+わからない✘
+を使って
+幅を100%じゃなくした　　　　　　　　
+3,-webkit-background-clip    
+わかる◎
+→要素の背景が<color>又は<image>の時
+境界の下まで拡張するかどうかを指定します
+種類　☟☟
+background-clip: padding-box;
+background-clip: content-box;
+background-clip: border-box;
+background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
+background-clip:tect;で画像(背景色)
+をかくして
+
+
+4,color:transparent;
+で文字のフォントカラーを透明にする
+(これにより背景色が浮かび上がってくるような感じになる)
+
+5,&:hover{ transform  }
+→skewY とはなんだろう
+傾斜という意味
+
+種類　☟☟☟
+translate 移動
+rotate  　回転
+scale     伸縮
+skew      傾斜
+
+
+6,transition all 2s
+all　←変化するすべてのプロパティへの適用
+2s ←　時間
+transitionを使う時は
+要素の2つの状態間の変化を定義しることができます
+それぞれ :hover や :activeのような
+疑似クラスで定義するか
+JSを使用して動的に設定する
+
+7,letter-spacing
+を使って文字同士の余白を空けた
+
+8,transform の scale
+hoverしたときに画像を拡大伸縮できる
+
+9,text-shadowを指定して　
+hoverしたときに色を変えた
+
+
+*/
+
+/* 1, main part 1-2概要編
+
+
+1.heading-tertiary
+
+
+2,ユーティリティクラスを使うことで
+-classを2つにする
+-u-center-textが  big
+-heading-tertiaryが　small
+このクラスはutilityのファイルに書く
+
+3, 見出しとパラグラフができたから
+今度はボタンを設置する
+
+4,buttonを使うために特殊文字コードを使う
+URL  →　　http://rarak.jp/12676
+URL  →   codingheroes.io/resources/
+
+
+&larr;  ←
+&rarr;  →
+&uarr   ↑
+&darr;  ↓
+など!!
+
+5,button.scssにここから書いていく
+.btn-textは 下の矢印の
+疑似クラスをLOHA順で書いた
+
+*/
+
+
+
+
+/*1, main part 1-2 コード編
+&:not(:last-child)　
+を使うことで最後の子要素以外すべてに適用される
+ようになる
+
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,165 @@
+.popup {
+    height: 100vh;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color: rgba($color-black, .8);
+    z-index:9999;
+   // table-layout:fixed;
+   opacity:0;
+   visibility:hidden;
+   transition: all .2s;
+
+   &:target{
+       opacity:1;
+       visibility:visible;
+   }
+
+   &__close{
+       &:link,
+       &:visited{
+           color:$color-grey-dark;
+           position:absolute;
+           top:2.5rem;
+           right:2.5rem;
+           font-size:3rem;
+           text-decoration:none;
+           display:inline-block;
+           transition:all 1.5s;
+           line-height:1;
+           
+       }
+
+       &:hover{
+           color:$color-primary;
+       }
+   }
+
+
+ 
+
+
+
+    &__content{
+        height:33.7rem;   
+        background-image: radial-gradient(to right bottom, rgba($color-back, 0.8), rgba($color-primary-dark, 0.8));
+        @include absCenter;
+        width:75%;
+        background-color:$btn-white;
+        box-shadow:0 2rem 4rem rgba($color-black, .3);
+        border-radius:3px;
+       // display:table;
+        overflow:hidden;
+        transform: translate(-50%, -50%), scale(1.8);
+        transition:all 0.9s 0.7s;
+
+
+    }
+
+    &__left{
+        width:33.3%;
+        //display:table-cell;
+        float:left;
+
+    }
+
+    &__right{
+        width:66.7%;
+       // display:table-cell;
+        vertical-align:middle;
+        padding:4rem 5rem;
+        float:left;
+
+    }
+
+    &__img{
+        display:block;
+        width:100%;
+
+
+    }
+
+    &__text{
+        font-size:1.8rem;
+        margin-bottom:4rem;
+
+        //column-count:2;
+       // column-gap:３rem;
+       // column-rule:9px solid $color-grey-light-1;
+
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+$color-back:#CCFFCC;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//color
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+
+
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
+
+
+$color-tertiary-light: #2998ff;
+$color-tertiary-dark: #6543fa;
+
+$color-black: black;
+
+
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+
+
+
+$color-grey-light-1: #f7f7f7;
+
+
+$btn-white: #fff;
+$color-purple: rgb(94, 77, 236);
+
+//GRID
+$grid-width: 114rem;
+$dutter-vertical:8rem;
+$gutter-horizon:6rem;
+
+
+// FONT
+$default-font-size: 1.8rem;

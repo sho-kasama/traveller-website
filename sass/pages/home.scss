@@ -1,0 +1,121 @@
+$color-grey-light-1:rgb(212, 253, 236);
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-dark: #28b485;
+$color-grey-dark: #777;
+$color-grey-light-1: #f7f7f7;
+$btn-white: #fff;
+$color-purple: rgb(94, 77, 236);
+
+
+.section-about {
+    background-color:#F0FFF0;
+    padding: 21rem 0;
+    margin-top: -20vh;
+}
+
+
+.section-features{
+    padding: 13rem 0;
+    background-image: linear-gradient(to right bottom, rgba($color-primary, 0.8), rgba($color-primary-dark, 0.8)), url("../img/nat-4.jpg");
+    background-size:cover;
+    transform:skewY(-7deg);
+    margin-top:-10rem;
+
+    //↑右側にずれる
+    //↑marginにネガティブな値をつかうことでうまく
+    //余白を削る
+   
+
+    
+    & >*{
+        transform: skewY(7deg);
+        //↑反対方向に動かした斜めをなくした
+    }
+    
+
+}
+
+.section-tours {
+    background-color:#F0FFF0;
+    padding: 21rem 0 13rem 0;
+    margin-top:-13rem;
+ 
+
+}
+
+
+.section-stories {
+    position:relative;
+    padding: 15rem 0;
+}
+
+.section-book {
+      padding : 13rem 0;
+      background-image: linear-gradient(to right bottom,$color-primary-light,$color-primary-dark);
+
+}
+  
+.book {
+      background-image:linear-gradient(104deg,
+       rgba($btn-white, .9) 38%, 
+       rgba($btn-white, .9) 50%, 
+       transparent 50%),
+       url(../img/nat-10.jpg);
+      background-size: 100%;
+      border-radius:1.2rem;
+      box-shadow: 0 1.5rem 4rem rgba($color-black, .35);
+
+      height: 27.3rem;
+      margin-left:9rem;
+      margin-right:9rem;
+
+      &__form{
+          width:50%;
+          padding:3.3rem;
+      }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* [ 1,main part] 1-1
+_variablesの方でcolorを決めて
+こっちで使う
+paddingは 上下は25rem(250px) 
+baseでfont-sizeが62.5%と指定してあるから
+10pxということ
+default値が16pxなので
+*/
+
+/* [ 1,main part] 1-2
+margin-top: -20vh;を使った理由
+headerのheightに95vh が使われていて
+headerのclip-pathでくりぬかれている部分
+は75vhだったので 95-75 ⁼20
+この20が余白になっていた
+
+なのでこの20vhを埋める為に
+home.scssのsection-aboutに
+margin-top: -20vh;
+を使うことでその余白を埋めるようにした
+*/
